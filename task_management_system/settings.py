@@ -35,7 +35,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["task-management-xchz.onrender.com"]
 CSRF_TRUSTED_ORIGINS = [
-    "https://task-management-xchz.onrender.com/",
+    "https://task-management-xchz.onrender.com",
     "https://*.127.0.0.1",
 ]
 
