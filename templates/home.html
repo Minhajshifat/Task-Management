@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<di class="d-flex flex-wrap px-5 pt-3 align-items-center">
+    <div class="col-6">
+        <h2 class="fs-1 text-info">Add Your Task For Maintain your Time</h2>
+        <p class="fs-4 ">
+            When tasks are well-managed, it often leads to improved levels of performance. Team members can stay focused
+            on their
+            work, and they have a clear understanding of what needs to be done. Without task management, it's easy for
+            team members
+            to get sidetracked or to become bogged down in tasks that aren't that important.
+        </p>
+        {%if request.user.is_authenticated%}
+        <a class="nav-link btn btn-info text-primary " href="{%url 'showtask'%}"><strong> Go your Dashboad for
+                manage your Task</strong></a>
+        {%else%}
+        <a class="nav-link btn btn-primary text-success mx-4 fs-5" href="{%url 'registation'%}"> Go for Registation</a>
+        <a class="nav-link btn btn-info text-secondary mx-5" href="{%url 'login'%}">Go for Log IN</a>
+        {%endif%}
+
+    </div>
+
+
+    <img src="{%static 'home 2.jpeg'%}" class="col-6" alt="">
+    </div>
+
+
+
+
+
+
+
+
+    {% endblock content %}
