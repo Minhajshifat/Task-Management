@@ -33,7 +33,7 @@ SECRET_KEY = "django-insecure-t&h66zwd&g=30&@8)$@8!1u_soluq5x*7xqz0)_a#05$!g6%ws
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["task-management-xchz.onrender.com"]
+ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = [
     "https://task-management-xchz.onrender.com",
     "https://*.127.0.0.1",

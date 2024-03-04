@@ -7,7 +7,7 @@ urlpatterns = [
     path("login/", views.UserLoginView.as_view(), name="login"),
     path("logout/", views.userLogout, name="logout"),
     path(
-        "activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/",
+        "active/<uid64>/<token>/",
         views.activate,
         name="activate",
     ),
