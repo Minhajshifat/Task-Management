@@ -2,12 +2,17 @@
 
 
 {% block content %}
+{%load static%}
 
-{%if messages%}
-{%for msg in messages%}
-<h1>{{msg}}</h1>
-{%endfor%}
-{%endif%}
+<div style="width: 25%;">
+    {%for message in messages%}
+    <div class="alert alert-danger" role="alert">
+        {{message}}
+    </div>
+    {%endfor%}
+
+
+</div>
 <h1 class="text-info" style="text-align: center;">Well come {{request.user.username}} Now You can Add your Task</h1>
 <h1 style="text-align: center;">All Tasks</h1>
 
@@ -29,7 +34,9 @@
             <a href="{% url 'showtask'%}" class="text-decoration-none text-dark">ALL</a>
         </label>
         <br>
-        <a href="{% url 'tasksort'%}" class="btn btn-secondary">Sort Task by Priority Level</a>
+        <a href="{% url 'tasksort'%}" class="btn btn-secondary my-3">Sort Task by Priority Level</a>
+        <br>
+        <a href="{% url 'addtask'%}" class="btn btn-success my-3">Add Task</a>
     </div>
 
     <div class=" col-10 p-3 d-flex flex-wrap">
