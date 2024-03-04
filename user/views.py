@@ -28,7 +28,9 @@ def signup(request):
             print("token ", token)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             print("uid ", uid)
-            confirm_link = f"http://127.0.0.1:8000//user/active/{uid}/{token}"
+            confirm_link = (
+                f"https://task-management-xchz.onrender.com//user/active/{uid}/{token}"
+            )
             email_subject = "Confirm Your Email"
             email_body = render_to_string(
                 "acc_active_email.html", {"confirm_link": confirm_link}
