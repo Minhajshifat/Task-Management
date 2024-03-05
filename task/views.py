@@ -33,7 +33,7 @@ def add_task(request):
             task.save()
             send_mail_to_user(request.user, "Task added successfully", "add_mail.html")
 
-            return redirect("home")
+            return redirect("showtask")
     else:
         taskform = forms.taskform()
     return render(request, "add_task.html", {"form": taskform})
@@ -48,7 +48,7 @@ def edit_post(request, id):
             taskform.save()
             if post.complete:
                 send_mail_to_user(request.user, "Task completed", "completed.html")
-            return redirect("home")
+            return redirect("showtask")
     return render(request, "add_task.html", {"form": taskform})
 
 
