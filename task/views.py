@@ -66,10 +66,10 @@ def show_task(request, category_slug=None):
     category = models.TaskCategory.objects.all()
     if category_slug:
         cat_type = models.TaskCategory.objects.filter(slug=category_slug).first()
+        user_id = request.user.id
         if cat_type:
-            Tasks = models.TaskModel.objects.filter(
-                category=cat_type, user=user_id
-            ).order_by("task_due_date")
+            Tasks = Tasks.filter(category=cat_type)
+
     return render(
         request,
         "show_task.html",
