@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<div>
+<div style="width: 50%;">
     {%for message in messages%}
     <div class="alert alert-danger" role="alert">
         {{message}}
@@ -48,7 +48,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="col-9 m-auto">
+    <div class="col-9 m-auto my-5">
         <h2 class="fs-1 text-info">Add Your Task For Maintain your Time</h2>
         <p class="fs-4 ">
             When tasks are well-managed, it often leads to improved levels of performance. Team members can stay focused
@@ -69,8 +69,8 @@
     </div>
     <br>
     <br>
-    <div class="task d-flex flex-wrap col-8 m-auto">
-        <div class="card mx-3 bg-info-subtle" style="width: 18rem;">
+    <div class="task d-flex flex-wrap col-6 m-auto my-5" style="align-items: center;justify-content: center;">
+        <div class="card mx-3 bg-opacity-10 bg-info-subtle" style="width: 12rem;">
             <img src="{%static 'add Task.png'%}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-success">a new task item will appear in your Tasks list</h5>
@@ -81,7 +81,7 @@
                 {%endif%}
             </div>
         </div>
-        <div class="card mx-3 bg-info-subtle" style="width: 18rem;">
+        <div class="card mx-3 bg-info-subtle" style="width: 12rem;">
             <img src="{%static 'update.png'%}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-primary">a Task item can be updated from your Tasks list</h5>
@@ -92,8 +92,8 @@
                 {%endif%}
             </div>
         </div>
-        <div class="card mx-3 bg-info-subtle" style="width: 18rem;">
-            <img src="{%static 'delete.png'%}" class="card-img-top" alt="...">
+        <div class="card mx-3 bg-info-subtle" style="width: 12rem;">
+            <img src="{%static 'delete1.png'%}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-danger">you can delete your task form your Tasks list</h5>
                 {%if request.user.is_authenticated %}
